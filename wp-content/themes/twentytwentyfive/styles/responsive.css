@@ -1,0 +1,409 @@
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-inner img {
+    max-height: 240px;
+  }
+
+  .product-section {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .insights-row {
+    flex-direction: column;
+  }
+
+  .insight-card {
+    height: 200px;
+    flex: none !important;
+  }
+
+  .insight-card .insight-content {
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-section h2 {
+    font-size: 28px;
+  }
+
+  .form-control {
+    padding: 14px 16px;
+  }
+
+  .contact-btn {
+    padding: 12px 30px;
+  }
+}
+
+@media(max-width: 768px) {
+  .footer-bg-text {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  #mobileMenu {
+    z-index: 1050;
+  }
+
+  #mobileMenu a,
+  #mobileMenu select {
+    width: 100%;
+    text-decoration: none;
+  }
+
+  #mobileMenu a {
+    text-align: center;
+    border-bottom: 1px solid #f2efee;
+  }
+
+  #menuClose {
+    background-color: #2d2522;
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+  }
+
+  .menu-bottom {
+    margin-top: auto;
+    /* Pushes this section to the bottom */
+  }
+
+  .heading-style1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .custom-accordion .accordion-item {
+    margin-top: 0px;
+  }
+
+  .custom-accordion .heading-text,
+  .quote-text,
+  .custom-accordion .accordion-content,
+  .about-us .accordion-body,
+  .about-us .accordion-content,
+  .faq .accordion-button,
+  .faq .accordion-content,
+  .social-icons a i {
+    font-size: 14px;
+  }
+
+  .feature-icon {
+    font-size: 1.5rem;
+  }
+
+  .choice,
+  .key-features,
+  .complex-problems,
+  .product-section,
+  .market-research,
+  .testimonials,
+  .comparison,
+  .explore,
+  .about-us,
+  .insights,
+  .faq,
+  .contact {
+    padding: 50px 0;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .heading-style2,
+  .feature-title,
+  .solution-title {
+    font-size: 16px;
+  }
+
+  .feature-desc,
+  .solution-desc,
+  .checkout-info {
+    font-size: 14px;
+  }
+
+  /* //////// Scroll ////////// */
+
+  .feature-scroll-container,
+  .complex-problems-scroll-container,
+  .market-research-scroll-container,
+  .testimonials-scroll-container,
+  .comparison-scroll-container,
+  .insights-scroll-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .comparison-scroll-container,
+  .insights-scroll-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .feature-box {
+    height: 266px;
+    padding: 60px;
+  }
+
+  .feature-card,
+  .solution-card,
+  .market-card,
+  .testimonials-card,
+  .insight-card {
+    flex: 0 0 90%;
+    max-width: 90%;
+    border-radius: 16px;
+    padding: 30px 20px;
+    scroll-snap-align: start;
+    text-align: center;
+  }
+
+  .solution-card,
+  .insight-card {
+    max-width: 75%;
+    height: auto;
+  }
+
+  .insight-card {
+    padding: 0;
+  }
+
+  .complex-problems-scroll-container .solution_card:not(:first-child) {
+    margin-left: 20px;
+  }
+
+  .complex-problems-scroll-container .solution-card:not(:first-child) {
+    margin-left: 20px;
+  }
+
+  .feature-card img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .feature-card h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #000;
+  }
+
+  .feature-card p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  /* Hide scrollbar for webkit browsers */
+  .feature-scroll-container::-webkit-scrollbar,
+  .complex-problems-scroll-container::-webkit-scrollbar,
+  .market-research-scroll-container::-webkit-scrollbar,
+  .testimonials-scroll-container::-webkit-scrollbar,
+  .comparison-scroll-container::-webkit-scrollbar,
+  .insights-scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .feature-scroll-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .key-features .desktop,
+  .complex-problems .desktop,
+  .market-research .desktop,
+  .testimonials .desktop,
+  .explore .desktop,
+  .insights .desktop {
+    display: none !important;
+  }
+
+  .solution-icon img {
+    width: 40px;
+  }
+
+  .solution-content {
+    padding-top: 10px;
+    text-align: left;
+  }
+
+  /* //////////////// Product section ////////////// */
+  .product-section .container .row,
+  .about-us .container .row {
+    width: 100%;
+    margin: 0;
+  }
+
+  .product-section {
+    padding-top: 30px !important;
+    padding-bottom: 0px !important;
+    text-align: center !important;
+  }
+
+  .product-info.ps-5 {
+    padding-left: 0 !important;
+  }
+
+  .product-section .section-title,
+  .insights .section-title {
+    margin: 20px 0;
+    text-align: center !important;
+  }
+
+  .product-section .product-info .price-info {
+    text-align: center !important;
+    display: block !important;
+  }
+
+  .product-info .checkout-info {
+    padding-top: 20px !important;
+    text-align: center !important;
+  }
+
+  /* //////////// Market Research /////////// */
+  .market-card,
+  .testimonials-card,
+  .feature-card {
+    padding: 0;
+  }
+
+  .market-card .market-content,
+  .testimonials-card .testimonials-content,
+  .insight-card {
+    text-align: left;
+  }
+
+  .market-research-scroll-container .market-card:nth-child(2),
+  .market-research-scroll-container .market-card:nth-child(3),
+  .testimonials-scroll-container .testimonials-card:nth-child(2),
+  .testimonials-scroll-container .testimonials-card:nth-child(3),
+  .feature-scroll-container .feature-card:not(:first-child),
+  .complex-problems-scroll-container .solution-card:not(:first-child),
+  .insights-scroll-container .insight-card:not(:first-child) {
+    margin-left: 10px;
+  }
+
+  /* /////////////// Testimonials ///////////// */
+  .testimonials .section-title .sub-title {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  /* //////////////// Comparison /////////////// */
+  .custom-image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 10px;
+  }
+
+  .custom-image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  /* Position-specific customizations to match the visual layout */
+  .custom-image-grid img:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .custom-image-grid img:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .custom-image-grid img:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .custom-image-grid img:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .custom-image-grid img:nth-child(5) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .custom-image-grid img:nth-child(6) {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  .custom-image-grid {
+    flex-direction: column;
+  }
+
+  .custom-image-grid .column {
+    flex: 1 1 100%;
+  }
+
+  /* ////////////// About /////////// */
+  .about-us .about-content {
+    margin-top: 40px;
+    padding: 0;
+  }
+
+  /* ////////// Footer ///////////// */
+  .social-icons a {
+    width: 32px;
+    height: 32px;
+  }
+
+  .language-select {
+    position: relative;
+  }
+
+  .quick-links,
+  .support-links,
+  .newsletter button {
+    width: 50%;
+
+  }
+
+  .quick-links,
+  .support-links,
+  .newsletter-box {
+    margin-top: 40px;
+  }
+
+  .newsletter {
+    margin-top: 10px;
+  }
+
+  .footer-links-box {
+    padding: 15px 0 50px 0;
+  }
+  .footer-bottom{
+    margin-top: 5px;
+    text-align: center !important;
+  }
+  .footer-bg-text{
+    font-size: 75px;
+  }
+}

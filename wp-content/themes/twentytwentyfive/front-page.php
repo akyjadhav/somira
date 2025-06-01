@@ -7,42 +7,69 @@
 	<title>Somira DeepRelief</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="<?= get_template_directory_uri() . '/styles/' ?>https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<link href="<?= get_template_directory_uri() . '/styles/' ?>main.css" rel="stylesheet">
-
+       <link href="<?= get_template_directory_uri() . '/styles/' ?>responsive.css" rel="stylesheet">
 </head>
 
 <body>
 
 	<!-- Fixed Navbar -->
 	<nav class="navbar fixed-top">
-		<div class="container px-4 d-flex align-items-center justify-content-between">
+		<div class="container d-flex justify-content-between align-items-center px-3">
+			<span class="navbar-brand">SOMIRA</span>
 
-			<!-- Left Section: Logo + Divider + Nav -->
-			<div class="d-flex align-items-center">
-				<span class="navbar-brand">SOMIRA</span>
-				<div class="divider"></div>
-				<div class="d-flex gap-4 align-items-center">
+			<!-- Mobile Menu Trigger -->
+			<div class="d-lg-none d-flex align-items-center gap-2">
+				<div class="cart-icon rounded-circle p-2">
+					<i class="fas fa-bag-shopping"></i>
+				</div>
+				<button class="navbar-toggler border-0 bg-dark rounded-circle p-2" type="button" id="menuToggle">
+					<i class="fas fa-bars text-white"></i>
+				</button>
+			</div>
+
+			<!-- Desktop Menu -->
+			<div class="collapse navbar-collapse d-lg-flex justify-content-between align-items-center"
+				id="navbarContent">
+				<div class="d-flex align-items-center gap-4">
+					<div class="divider d-none d-lg-block"></div>
 					<a class="nav-link active" href="#">Home</a>
 					<a class="nav-link" href="#">Somira DeepRelief™</a>
 					<a class="nav-link" href="#">Contact</a>
 				</div>
+				<div class="d-flex align-items-center gap-3">
+					<select class="form-select form-select-sm w-auto">
+						<option>EUR €</option>
+						<option>USD $</option>
+					</select>
+					<button class="btn btn-buy btn-style1 text-white rounded-pill px-4">Buy Now</button>
+					<div class="cart-icon rounded-circle p-2 d-none d-lg-block">
+						<i class="fas fa-bag-shopping"></i>
+					</div>
+				</div>
 			</div>
+		</div>
 
-			<!-- Right Section: Currency + Buy Now + Cart -->
-			<div class="d-flex align-items-center gap-3">
-				<select>
+		<!-- Mobile Slide-out Menu -->
+		<div id="mobileMenu" class="d-lg-none position-fixed top-0 end-0 bg-white vh-100 w-100 shadow p-4"
+			style="transform: translateX(100%); transition: transform 0.3s ease;">
+			<button id="menuClose" class="float-end">X</button>
+			<div class="d-flex flex-column gap-4 mt-5">
+				<a href="#" class="fs-4 fw-bold text-dark pb-3">Home</a>
+				<a href="#" class="fs-4 fw-bold text-dark pb-3">Somira DeepRelief™</a>
+				<a href="#" class="fs-4 fw-bold text-dark pb-3">Contact</a>
+			</div>
+			<div class="d-flex flex-column gap-4 mt-5 menu-bottom">
+				<select class="form-select form-select-lg">
 					<option>EUR €</option>
 					<option>USD $</option>
 				</select>
-				<button class="btn btn-buy btn-style1 text-white">Buy Now</button>
-				<div class="cart-icon">
-					<i class="fas fa-bag-shopping"></i>
-				</div>
+				<button class="btn btn-dark btn-lg rounded-pill">Buy Now</button>
 			</div>
-
 		</div>
 	</nav>
+
 
 	<!-- Hero Banner with Video -->
 	<!-- <section class="position-relative text-white">
@@ -93,23 +120,22 @@
 	</section>
 	<section class="py-4 bg-white">
 		<div class="container text-center">
-
 			<div class="row justify-content-center align-items-center g-4">
-				<div class="col-2 col-sm-2 text-center">
+				<div class="col-12 col-sm-12 col-md-2 text-center">
 					<span class="mb-4 text-style1" style="letter-spacing: 1px;">
-						FEATURED IN &raquo;
+						FEATURED IN »
 					</span>
 				</div>
-				<div class="col-2 col-sm-2 text-center">
+				<div class="col-3 col-sm-3 col-md-2 text-center">
 					<img src="<?= get_template_directory_uri() . '/styles/' ?>healthcare.png" alt="Healthline" class="img-fluid" style="max-height: 28px;">
 				</div>
-				<div class="col-2 col-sm-2 text-center">
+				<div class="col-3 col-sm-3 col-md-2 text-center">
 					<img src="<?= get_template_directory_uri() . '/styles/' ?>cbs1.png" alt="CBS" class="img-fluid" style="max-height: 28px;">
 				</div>
-				<div class="col-2 col-sm-2 text-center">
+				<div class="col-3 col-sm-3 col-md-2 text-center">
 					<img src="<?= get_template_directory_uri() . '/styles/' ?>gq12.png" alt="GQ" class="img-fluid" style="max-height: 28px;">
 				</div>
-				<div class="col-2 col-sm-2 text-center">
+				<div class="col-3 col-sm-3 col-md-2 text-center">
 					<img src="<?= get_template_directory_uri() . '/styles/' ?>forbes.png" alt="Forbes" class="img-fluid" style="max-height: 28px;">
 				</div>
 			</div>
@@ -214,7 +240,7 @@
 
 				</div>
 				<div class="col-sm-6 mt-4 mb-4 mx-auto">
-					<div class="row mt-5 bg-theme-color2 rounded-4">
+					<div class="mt-5 bg-theme-color2 rounded-4">
 						<div class="col-lg-10 mx-auto">
 							<div class="p-4 rounded-4 text-left quote-text">
 								<span class="fw-bold">Our original creation. Engineered by experts, proven effective,
@@ -234,10 +260,11 @@
 		<div class="container">
 			<h2 class="section-title">Key Features <span class="breakline"><span class="color1">&</span>
 					Functions</span></h2>
-			<div class="row g-4">
-				<div class="col-md-4">
+
+			<div class="mobile feature-scroll-container d-md-none">
+				<div class="col-md-4 feature-card">
 					<div class="feature-box bg-theme-color2">
-						<img src="<?= get_template_directory_uri() . '/styles/' ?>p1.png" alt="Massage">
+						<img src="<?= get_template_directory_uri() . '/styles/' ?>p1.png" alt="Heat Therapy">
 					</div>
 					<div class="feature-title pt-2">Massage</div>
 					<div class="feature-desc pb-4">
@@ -245,7 +272,66 @@
 						relief.
 					</div>
 				</div>
+				<div class="col-md-4 feature-card">
+					<div class="feature-box bg-theme-color2">
+						<img src="<?= get_template_directory_uri() . '/styles/' ?>p2.webp" alt="Heat Therapy">
+					</div>
+					<div class="feature-title pt-2">Optional Heat Therapy</div>
+					<div class="feature-desc pb-4">Delivers gentle warmth that complements the massage experience.
+						Engineered with built-in overheat protection.</div>
+				</div>
 
+				<div class="col-md-4 feature-card">
+					<div class="feature-box bg-theme-color2">
+						<img src="<?= get_template_directory_uri() . '/styles/' ?>p3.webp" alt="Red Light Therapy">
+					</div>
+					<div class="feature-title pt-2">Red Light Therapy</div>
+					<div class="feature-desc pb-4">Feel the low-level red light technology designed to support health
+						and
+						wellness.</div>
+				</div>
+
+				<div class="col-md-4 feature-card">
+					<div class="feature-box bg-theme-color2">
+						<img src="<?= get_template_directory_uri() . '/styles/' ?>p4.png" alt="Smart Controls">
+					</div>
+					<div class="feature-title pt-2">Smart Controls</div>
+					<div class="feature-desc pb-4">Simple, intuitive buttons for your own personalization.</div>
+				</div>
+
+
+				<div class="col-md-4 feature-card">
+					<div class="feature-box bg-theme-color2">
+						<img src="<?= get_template_directory_uri() . '/styles/' ?>p5.png" alt="High Quality Material">
+					</div>
+					<div class="feature-title pt-2">High Quality Material</div>
+					<div class="feature-desc pb-4">Delivers gentle warmth that complements the massage experience.
+						Engineered with built-in overheat protection.</div>
+				</div>
+
+				<div class="col-md-4 feature-card">
+					<div class="feature-box bg-theme-color2">
+						<img src="<?= get_template_directory_uri() . '/styles/' ?>p6.png" alt="Extended Arm Rest Design">
+					</div>
+					<div class="feature-title pt-2">Extended Arm Rest Design</div>
+					<div class="feature-desc pb-4">Delivers gentle warmth that complements the massage experience.
+						Engineered with built-in overheat protection.</div>
+				</div>
+
+
+			</div>
+
+			<div class="desktop row g-4 d-none d-md-block">
+				<div class="col-md-4">
+					<div class="feature-box bg-theme-color2">
+						<img src="<?= get_template_directory_uri() . '/styles/' ?>p1.png" alt="Heat Therapy">
+					</div>
+					<div class="feature-title pt-2">Massage</div>
+					<div class="feature-desc pb-4">
+						Enjoy relaxing massage with auto-rotation, enhanced by DeepRelief™ technology for targeted
+						relief.
+					</div>
+				</div>
 				<div class="col-md-4">
 					<div class="feature-box bg-theme-color2">
 						<img src="<?= get_template_directory_uri() . '/styles/' ?>p2.webp" alt="Heat Therapy">
@@ -294,11 +380,72 @@
 	</section>
 
 	<section class="complex-problems bg-theme-color1">
-		<div class="container py-5">
+		<div class="container">
 			<h2 class="section-title">Complex Problems.<span class="breakline"><span
 						class="color1">Simple,</span><strong>Smart Solutions.</strong></span></h2>
 
-			<div class="row g-4">
+			<div class="mobile complex-problems-scroll-container d-md-none">
+				<div class="col-md-4 solution-card">
+					<div class="solution-icon"><img src="<?= get_template_directory_uri() . '/styles/' ?>s1.png"></div>
+					<div class="solution-content">
+						<div class="solution-title">Relieves Neck & Shoulder Pain</div>
+						<div class="solution-desc pt-2">Targets tension and stiffness to restore comfort and
+							mobility.</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 solution-card">
+					<div class="solution-icon"><img src="<?= get_template_directory_uri() . '/styles/' ?>s2.png"></div>
+					<div class="solution-content">
+						<div class="solution-title">Stress Relief</div>
+						<div class="solution-desc pt-2">Promotes relaxation and helps calm the mind and body after a
+							stressful day.</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 solution-card">
+					<div class="solution-icon"><img src="<?= get_template_directory_uri() . '/styles/' ?>s3.png"></div>
+					<div class="solution-content">
+						<div class="solution-title">On-Demand Health & Wellness</div>
+						<div class="solution-desc pt-2">Anytime, anywhere. Feel your best, wherever you are.</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-4 solution-card">
+					<div class="solution-icon"><img src="<?= get_template_directory_uri() . '/styles/' ?>s4.png"></div>
+					<div class="solution-content">
+						<div class="solution-title">Enables Muscle Recovery</div>
+						<div class="solution-desc pt-2">Loosens tight muscles and releases tension for enhanced
+							recovery.
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 solution-card">
+					<div class="solution-icon"><img src="<?= get_template_directory_uri() . '/styles/' ?>s5.png"></div>
+					<div class="solution-content">
+						<div class="solution-title">Boosts Blood Circulation</div>
+						<div class="solution-desc pt-2">Stimulates healthy flow to energize the body and reduce
+							physical
+							fatigue.</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 solution-card">
+					<div class="solution-icon"><img src="<?= get_template_directory_uri() . '/styles/' ?>s6.png"></div>
+					<div class="solution-content">
+						<div class="solution-title">Prolonged Sitting Solution</div>
+						<div class="solution-desc pt-2">Optimized for home, office, or commuting to ease any issues
+							caused by
+							sitting for long hours.</div>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="desktop row g-4  d-none d-md-block">
 				<div class="col-md-4">
 					<div class="solution-card">
 						<div class="solution-icon"><img src="<?= get_template_directory_uri() . '/styles/' ?>s1.png"></div>
@@ -392,12 +539,12 @@
 
 				<div class="col-md-6 product-info ps-5">
 					<h2 class="fw-bold section-title text-start">The Somira DeepRelief™<br>Massager Deluxe</h2>
-					<div class="d-flex align-items-center">
+					<div class="d-flex align-items-center price-info">
 						<span class="price">$79.99</span>
 						<span class="price-sale">$49.99</span>
 					</div>
 					<button class="checkout-btn mt-3 btn btn-style1 text-white">Proceed to Checkout</button>
-					<p class="mt-3 font16 text-start">
+					<p class="mt-3 font16 text-start checkout-info">
 						*Express shipping available | Certified secure checkout through Stripe® | Apple Pay, Visa,
 						Mastercard, American Express, Debit & Credit Cards
 					</p>
@@ -406,15 +553,45 @@
 		</div>
 	</section>
 	<section class="market-research">
-		<div class="container" style="max-width:1400px;">
+		<div class="container">
 			<div class="text-center mb-5">
-				<h2 class="fw-bold" style="font-size: 2.5rem;">
+				<h2 class="section-title">
 					Strategic Industry<br>
 					<span class="color1">and</span> Market Research
 				</h2>
 			</div>
 
-			<div class="row g-4">
+			<div class="mobile market-research-scroll-container d-md-none">
+				<div class="col-md-4 market-card">
+					<div class="p-4 rounded-4 h-100 bg-theme-color3 market-content">
+						<img src="<?= get_template_directory_uri() . '/styles/' ?>penn.png" alt="Penn Logo" class="mb-3">
+						<h6 class="fw-bold mb-2 font18">Massage</h6>
+						<p class="mb-0 text-muted font18 pt-2 pb-3">
+							We leveraged research on neuromuscular stimulation to guide our recovery-focused design.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4 market-card">
+					<div class="p-4 rounded-4 h-100 bg-theme-color3 market-content">
+						<img src="<?= get_template_directory_uri() . '/styles/' ?>cambridge.png" alt="Cambridge Logo" class="mb-3">
+						<h6 class="fw-bold mb-2 font18">Optional Heat Therapy</h6>
+						<p class="mb-0 text-muted font18 pt-2 pb-3">
+							Faculty insights shaped our approach to heat application and tension relief.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4 market-card">
+					<div class="p-4 rounded-4 h-100 bg-theme-color3 market-content">
+						<img src="<?= get_template_directory_uri() . '/styles/' ?>penn.png" alt="UGA Logo" class="mb-3">
+						<h6 class="fw-bold mb-2 font18">Red Light Therapy</h6>
+						<p class="mb-0 text-muted font18 pt-2 pb-3">
+							Scientific findings informed our engineering around circulation and postural support.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="desktop row g-4 d-none d-md-block">
 				<div class="col-md-4">
 					<div class="p-4 rounded-4 h-100 bg-theme-color3">
 						<img src="<?= get_template_directory_uri() . '/styles/' ?>penn.png" alt="Penn Logo" class="mb-3">
@@ -450,11 +627,72 @@
 	<section class="testimonials">
 		<div class="container">
 			<div class="text-center mb-5 section-title">
-				<h2 class="fw-bold">Testimonials</h2>
-				<p class="text-muted mb-0">Trusted by people like you</p>
+				<h2 class="section-title">Testimonials</h2>
+				<p class="sub-title font16 text-muted mb-0">Trusted by people like you</p>
 			</div>
 
-			<div class="row g-4 mb-4">
+			<div class="mobile testimonials-scroll-container d-md-none">
+				<div class="col-md-4 testimonials-card">
+					<div class="p-4 rounded-4 position-relative h-100 bg-theme-color3">
+						<img src="<?= get_template_directory_uri() . '/styles/' ?>t1.jpg" alt="Alyssa" class="rounded-circle mb-3">
+						<div class="position-absolute top-0 end-0 m-3">
+							<i class="quote fas fa-quote-right position-absolute top-0 end-0 m-3 color2"></i>
+						</div>
+						<div class="d-flex align-items-center gap-2 mb-1 mt-1">
+							<i class="fas fa-star text-warning"></i>
+							<span class="fw-semibold">5.0</span>
+						</div>
+						<div class="testimonials-content">
+							<p class="fw-bold mb-1 font18 mt-4">Alyssa Novak</p>
+							<p class="text-muted mb-0 font14 mt-3 pb-4">
+								After long work days at my desk, the Somira massager is my go-to for instant relief.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 testimonials-card">
+					<div class="p-4 rounded-4 position-relative h-100 bg-theme-color3 ">
+						<img src="<?= get_template_directory_uri() . '/styles/' ?>t2.jpg" alt="George" class="rounded-circle mb-3">
+						<div class="position-absolute top-0 end-0 m-3">
+							<i class="quote fas fa-quote-right position-absolute top-0 end-0 m-3 color2"></i>
+						</div>
+						<div class="d-flex align-items-center gap-2 mb-1  mt-1">
+							<i class="fas fa-star text-warning"></i>
+							<span class="fw-semibold">5.0</span>
+						</div>
+						<div class="testimonials-content">
+							<p class="fw-bold mb-1 font18 mt-4">Dr. George Romero</p>
+							<p class="text-muted mb-0 font14 mt-3 pb-4">
+								As a physiotherapist I am proud to have ordered 10 pieces. I hand them out to my
+								patients
+								for releasing muscle tension and I also personally like to use the product.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 testimonials-card">
+					<div class="p-4 rounded-4 position-relative h-100 bg-theme-color3 ">
+						<img src="<?= get_template_directory_uri() . '/styles/' ?>t3.jpg" alt="Hannah" class="rounded-circle mb-3 mt-1">
+						<div class="position-absolute top-0 end-0 m-3">
+							<i class="quote fas fa-quote-right position-absolute top-0 end-0 m-3 color2"></i>
+						</div>
+						<div class="d-flex align-items-center gap-2 mb-1">
+							<i class="fas fa-star text-warning"></i>
+							<span class="fw-semibold">5.0</span>
+						</div>
+						<div class="testimonials-content">
+							<p class="fw-bold mb-1 font18 mt-4">Hannah</p>
+							<p class="text-muted mb-0 font14 mt-3 pb-4">
+								It’s excellent, just wish the heat got a little bit hotter. Still use it every day
+								though.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="desktop row g-4 d-none d-md-block mb-4">
 				<!-- Card 1 -->
 				<div class="col-md-4">
 					<div class="p-4 rounded-4 position-relative h-100 bg-theme-color3">
@@ -522,7 +760,8 @@
 		<div class="container text-center">
 			<h2 class="section-title">Comparison <span class="breakline"><span class="color3">Why</span><strong> Somira
 						Wins </strong></span></h2>
-			<div class="comparison-table table-responsive mt-5">
+
+			<div class="comparison-table table-responsive mt-5 mobile comparison-scroll-container">
 				<table class="table mb-0 font16">
 					<thead>
 						<tr>
@@ -652,18 +891,27 @@
 						</tr>
 					</tbody>
 				</table>
-				<p class="font16 bg-theme-color3 mb-0 pt-5">
-					*The Somira DeepRelief™ Massager has a collectible premium value of $1500 — offered for just $49.99.
-				</p>
+
 			</div>
+			<p class="font16 bg-theme-color3 mb-0 pt-5">
+				*The Somira DeepRelief™ Massager has a collectible premium value of $1500 — offered for just $49.99.
+			</p>
 		</div>
 	</section>
 	<section class="explore bg-theme-color1">
 		<div class="container">
 			<h2 class="section-title">Explore Real-Life <span class="breakline"><span class="color3">Use</span><strong>
 						Scenarios </strong></span></h2>
+			<div class="custom-image-grid mobile comparison-scroll-container d-md-none">
+				<img src="<?= get_template_directory_uri() . '/styles/' ?>use5.jpg" alt="Foot massage">
+				<img src="<?= get_template_directory_uri() . '/styles/' ?>use1.jpg" alt="Top view of product">
+				<img src="<?= get_template_directory_uri() . '/styles/' ?>use7.jpg" alt="Red light therapy">
+				<img src="<?= get_template_directory_uri() . '/styles/' ?>use2.jpg" alt="Back massage">
+				<img src="<?= get_template_directory_uri() . '/styles/' ?>use3.jpg" alt="Car usage">
+				<img src="<?= get_template_directory_uri() . '/styles/' ?>use6.jpg" alt="Neck massage">
+			</div>
 
-			<div class="row">
+			<div class="row desktop  d-none d-md-block">
 				<div class="col-lg-5 col-md-12 mb-5 mb-lg-0">
 					<img src="<?= get_template_directory_uri() . '/styles/' ?>use5.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
 
@@ -681,6 +929,7 @@
 				</div>
 			</div>
 
+
 	</section>
 	<section class="about-us bg-theme-color3">
 		<div class="container accordion-container">
@@ -690,7 +939,7 @@
 					<img src="<?= get_template_directory_uri() . '/styles/' ?>about.png" alt="Founders" class="img-fluid align-self-end pt-4"
 						style="max-height: 500px;">
 				</div>
-				<div class="col-md-7">
+				<div class="col-md-7 about-content">
 					<div class="about-box bg-theme-color3">
 						<h4 class="pb-4 title font28 fw-bold">About us</h4>
 						<div class="accordion" id="aboutAccordion">
@@ -764,7 +1013,34 @@
 	<section class="insights">
 		<div class="container">
 			<div class="section-title">Latest Insights</div>
-			<div class="insights-row">
+
+			<div class="mobile insights-scroll-container d-md-none">
+				<div class="insight-card">
+					<img src="<?= get_template_directory_uri() . '/styles/' ?>insights1.png" alt="Insight 1">
+					<div class="insight-content">
+						<div class="insight-date">30 May, 2025</div>
+						<div class="insight-title">5 Everyday Habits That Are Secretly Hurting Your Neck</div>
+					</div>
+				</div>
+				<div class="insight-card">
+					<img src="<?= get_template_directory_uri() . '/styles/' ?>insights2.png" alt="Insight 2">
+					<div class="insight-content">
+						<div class="insight-date">30 May, 2025</div>
+						<div class="insight-title">How to Use a Neck Massager Properly</div>
+					</div>
+				</div>
+				<div class="insight-card">
+					<img src="<?= get_template_directory_uri() . '/styles/' ?>insights3.png" alt="Insight 3">
+					<div class="insight-content">
+						<div class="insight-date">30 May, 2025</div>
+						<div class="insight-title">Tips for a Healthier Posture While Working</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="insights-row desktop d-none d-md-block">
+
 				<div class="insight-card">
 					<img src="<?= get_template_directory_uri() . '/styles/' ?>insights1.png" alt="Insight 1">
 					<div class="insight-content">
@@ -937,7 +1213,7 @@
 						<option>International (English)</option>
 					</select>
 				</div>
-				<div class="col-md-3 footer-links">
+				<div class="col-md-3 footer-links quick-links">
 					<h5>QUICK LINKS</h5>
 					<ul>
 						<li><a href="#">Blog</a></li>
@@ -946,7 +1222,7 @@
 						<li><a href="#">Contact</a></li>
 					</ul>
 				</div>
-				<div class="col-md-3 footer-links">
+				<div class="col-md-3 footer-links support-links">
 					<h5>SUPPORT</h5>
 					<ul>
 						<li><a href="#">Sitemap</a></li>
@@ -955,7 +1231,7 @@
 						<li><a href="#">Shipping & Refunds</a></li>
 					</ul>
 				</div>
-				<div class="col-md-3 footer-links">
+				<div class="col-md-3 footer-links newsletter-box">
 					<h5>SUBSCRIBE NEWSLETTER</h5>
 					<form class="newsletter">
 						<input type="email" placeholder="user@website.com">
@@ -983,7 +1259,7 @@
 
 
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="<?= get_template_directory_uri() . '/styles/' ?>https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 <script>
 	$(document).ready(function () {
@@ -1016,7 +1292,12 @@
 				$('nav').removeClass('scrolled');
 			}
 		});
-
+		$("#menuToggle").click(function () {
+			$("#mobileMenu").css("transform", "translateX(0)");
+		});
+		$("#menuClose").click(function () {
+			$("#mobileMenu").css("transform", "translateX(100%)");
+		});
 
 	});
 </script>
