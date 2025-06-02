@@ -1270,7 +1270,7 @@
 
 
 
-	<script src="<?= get_template_directory_uri() . '/styles/' ?>https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 <script>
 	$(document).ready(function () {
