@@ -7,7 +7,7 @@
 	<title>Somira DeepRelief</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-	<script src="<?= get_template_directory_uri() . '/styles/' ?>https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<link href="<?= get_template_directory_uri() . '/styles/' ?>main.css" rel="stylesheet">
        <link href="<?= get_template_directory_uri() . '/styles/' ?>responsive.css" rel="stylesheet">
 </head>
@@ -1263,7 +1263,8 @@
 </body>
 <script>
 	$(document).ready(function () {
-		$('.custom-accordion .accordion-item .title').on('click', function () {
+		
+               $('.custom-accordion .accordion-item .title').on('click', function () {
 			const parent = $(this).closest('.accordion-item');
 			if (parent.hasClass('active')) {
 				parent.removeClass('active');
@@ -1292,10 +1293,10 @@
 				$('nav').removeClass('scrolled');
 			}
 		});
-		$("#menuToggle").click(function () {
+		$("#menuToggle").on("click touchstart", function () {
 			$("#mobileMenu").css("transform", "translateX(0)");
 		});
-		$("#menuClose").click(function () {
+		$("#menuClose").on("click touchstart", function () {
 			$("#mobileMenu").css("transform", "translateX(100%)");
 		});
 
