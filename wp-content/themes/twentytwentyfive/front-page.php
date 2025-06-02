@@ -52,21 +52,32 @@
 		</div>
 
 		<!-- Mobile Slide-out Menu -->
-		<div id="mobileMenu" class="d-lg-none position-fixed top-0 end-0 bg-white vh-100 w-100 shadow p-4"
-			style="transform: translateX(100%); transition: transform 0.3s ease;">
-			<button id="menuClose" class="float-end">X</button>
-			<div class="d-flex flex-column gap-4 mt-5">
-				<a href="#" class="fs-4 fw-bold text-dark pb-3">Home</a>
-				<a href="#" class="fs-4 fw-bold text-dark pb-3">Somira DeepRelief™</a>
-				<a href="#" class="fs-4 fw-bold text-dark pb-3">Contact</a>
-			</div>
-			<div class="d-flex flex-column gap-4 mt-5 menu-bottom">
-				<select class="form-select form-select-lg">
-					<option>EUR €</option>
-					<option>USD $</option>
-				</select>
-				<button class="btn btn-dark btn-lg rounded-pill">Buy Now</button>
-			</div>
+		<div id="mobileMenu"
+		     class="d-lg-none position-fixed top-0 end-0 bg-white vh-100 w-100 shadow d-flex flex-column">
+
+		  <!-- Close Button -->
+		  <div class="d-flex justify-content-end mb-3">
+		    <button id="menuClose" class="btn btn-dark rounded-circle" style="width: 36px; height: 36px;">X</button>
+		  </div>
+
+		  <!-- Main content (non-flex-grow) -->
+		  <div class="d-flex flex-column gap-4">
+		    <a href="#" class="fs-4 fw-bold text-dark border-bottom pb-2">Home</a>
+		    <a href="#" class="fs-4 fw-bold text-dark border-bottom pb-2">Somira DeepRelief™</a>
+		    <a href="#" class="fs-4 fw-bold text-dark border-bottom pb-2">Contact</a>
+		  </div>
+
+		  <!-- Spacer to push bottom content -->
+		  <div class="flex-grow-1"></div>
+
+		  <!-- Bottom menu -->
+		  <div class="setyui d-flex flex-column gap-3">
+		    <select class="form-select form-select-lg">
+		      <option>EUR €</option>
+		      <option>USD $</option>
+		    </select>
+		    <button class="btn btn-dark btn-lg rounded-pill">Buy Now</button>
+		  </div>
 		</div>
 	</nav>
 
