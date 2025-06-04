@@ -37,7 +37,7 @@
                         <option>EUR €</option>
                         <option>USD $</option>
                     </select>
-                    <button class="btn btn-buy btn-style1 text-white rounded-pill px-4">Buy Now</button>
+                    <button class="btn btn-buy btn-style1 text-white rounded-pill px-4">BUY NOW</button>
                     <div class="cart-icon rounded-circle p-2 d-none d-lg-block">
                         <i class="fas fa-bag-shopping"></i>
                     </div>

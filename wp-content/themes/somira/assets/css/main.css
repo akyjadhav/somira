@@ -180,12 +180,17 @@ select:focus {
 .font28 {
   font-size: 28px;
 }
+.cart-icon:hover {
+  background: #f0e9e6;
+  transition: background 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
 
 .btn-style1:hover {
-
-  background: linear-gradient(90deg, #a77966, #3c2a25);
+  background: linear-gradient(90deg, #483b35, #382722);
   color: white !important;
-  transition: background 2s ease;
+  transition: background 4s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.55);
 }
 
 .text-style1 {
