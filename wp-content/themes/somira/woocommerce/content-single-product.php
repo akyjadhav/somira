@@ -3,14 +3,6 @@ defined('ABSPATH') || exit;
 global $product;
 do_action('woocommerce_before_single_product');
 
-if (post_password_required()) {
-	echo get_the_password_form();
-	return;
-}
-
-if (!$product)
-	return;
-
 $product_id = $product->get_id();
 $title = $product->get_name();
 $price_html = $product->get_price_html();
