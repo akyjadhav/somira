@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'somirafont';
+  src: url('assets/fonts/Manrope-Regular.ttf') format('ttf');
+  font-weight: 300 900;
+  font-style: normal;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'somirafont', sans-serif;
+}
