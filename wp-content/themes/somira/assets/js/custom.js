@@ -36,6 +36,8 @@ jQuery(document).ready(function () {
     jQuery("#mobileMenu").css("transform", "translateX(100%)");
   });
 
+  console.log(my_ajax_obj.ajax_url); 
+
   jQuery('#ajaxAddToCartForm').submit(function (e) {
     e.preventDefault();
 
@@ -44,14 +46,17 @@ jQuery(document).ready(function () {
 
     jQuery.ajax({
       type: 'POST',
-      url: 'http://localhost/somira/wp-admin/admin-ajax.php',
+      url: my_ajax_obj.ajax_url,
       data: {
         action: 'ajax_add_to_cart',
         product_id: productID,
         quantity: quantity
       },
       success: function (response) {
-        alert(1)
+        alert('Product added to cart!');
+      },
+      error: function (xhr, status, error) {
+        console.log('AJAX Error:', error);
       }
     });
   });

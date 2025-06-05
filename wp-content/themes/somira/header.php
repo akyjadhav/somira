@@ -15,8 +15,9 @@
 
             <!-- Mobile Menu Trigger -->
             <div class="d-lg-none d-flex align-items-center gap-2">
-                <div class="cart-icon rounded-circle p-2">
-                    <i class="fas fa-bag-shopping"></i>
+                <div class="cart-icon d-lg-flex rounded-circle p-2 justify-content-center align-items-center"
+                    style="">
+                    <i class="fas fa-bag-shopping text-dark"></i>
                 </div>
                 <button class="navbar-toggler border-0 bg-dark rounded-circle p-2" type="button" id="menuToggle">
                     <i class="fas fa-bars text-white"></i>
@@ -38,8 +39,9 @@
                         <option>USD $</option>
                     </select>
                     <button class="btn btn-buy btn-style1 text-white rounded-pill px-4">BUY NOW</button>
-                    <div class="cart-icon rounded-circle p-2 d-none d-lg-block">
-                        <i class="fas fa-bag-shopping"></i>
+                    <div class="cart-icon d-none d-lg-flex rounded-circle p-2 justify-content-center align-items-center"
+                        style="">
+                        <i class="fas fa-bag-shopping text-dark"></i>
                     </div>
                 </div>
             </div>

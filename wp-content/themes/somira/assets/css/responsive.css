@@ -53,7 +53,7 @@
   #mobileMenu {
     z-index: 1050;
     transform: translateX(100%);
-    transition: transform 0.3s ease 0s; 
+    transition: transform 0.3s ease 0s;
     padding: 1.5rem;
   }
 
@@ -77,17 +77,19 @@
     border-radius: 50%;
     font-size: 1.2rem;
   }
-  .navbar-toggler{
-   width:38px;
+
+  .navbar-toggler {
+    width: 38px;
   }
+
   .menu-bottom {
 
     /* Pushes this section to the bottom */
 
-  padding-bottom: env(safe-area-inset-bottom, 1rem);
+    padding-bottom: env(safe-area-inset-bottom, 1rem);
 
   }
-  
+
 
   .heading-style1 {
     font-size: 24px;
@@ -317,8 +319,9 @@
     font-size: 16px;
     font-weight: normal;
   }
-    .testimonials .btn-style1{
-    margin-top:30px;  
+
+  .testimonials .btn-style1 {
+    margin-top: 30px;
   }
 
   /* //////////////// Comparison /////////////// */
@@ -411,11 +414,74 @@
   .footer-links-box {
     padding: 15px 0 50px 0;
   }
-  .footer-bottom{
+
+  .footer-bottom {
     margin-top: 5px;
     text-align: center !important;
   }
-  .footer-bg-text{
+
+  .footer-bg-text {
     font-size: 75px;
   }
+
+  /* ////////// PDP Page //////////// */
+  .left-arrow::before {
+    border-right: 10px solid #564a46;
+  }
+
+  .right-arrow::before {
+    border-left: 10px solid #564a46;
+  }
+
+  .left-arrow::before,
+  .right-arrow::before {
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  .arrow.left-arrow.ps-5 {
+    padding-left: 0 !important;
+  }
+
+  .arrow.right-arrow.pe-5 {
+    padding-right: 0 !important;
+  }
+
+  .product-details-container .product .thumbs.gap-4 {
+    gap: 1rem !important;
+  }
+
+  .woocommerce .thumbs img {
+    height: auto;
+  }
+
+  .product-info-block.ps-5 {
+    padding-left: calc(var(--bs-gutter-x) * .5) !important;
+  }
+
+  .product-title {
+    font-size: 26px;
+  }
+
+  .product-info-block ul li i.fa-certificate {
+    font-size: 18px !important;
+  }
+
+  .product-info-block ul li i.fa-check {
+    left: 4px;
+    top: 4px;
+    font-size: 10px;
+  }
+  .product-info-block ul{
+    padding-top: 10px;
+  }
+  .product-info-block .price span, .product-info-block .price del{
+    font-size: 18px;
+  }
+  .product-swatch .feature-swatch{
+    margin-top: 20px;
+  }
+  .country-select .fas.fa-map-marker-alt{
+    font-size: 18px !important;
+  } 
 }

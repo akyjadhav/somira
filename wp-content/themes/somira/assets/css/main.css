@@ -1227,3 +1227,10 @@ footer .section-title {
 .bottom-row {
   justify-content: center;
 }
+.payment-btn{
+  font-size: 14px;
+}
+.country-select .fas.fa-map-marker-alt{
+  font-size: 22px !important;
+  color: #212121 !important;
+} 
