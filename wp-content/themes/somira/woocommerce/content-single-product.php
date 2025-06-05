@@ -107,7 +107,7 @@ $current_price = $product->get_price();
                                                 value="<?php echo $product->get_id(); ?>" />
                                             <div class="col-6 col-md-6 mb-2 mb-md-0">
                                                 <div class="d-inline-flex align-items-center border rounded px-2 py-1 
-                                                    bg-transparent border-secondary w-100">
+                                                    bg-transparent border-secondary w-100 quantity-box">
                                                     <button
                                                         class="btn btn-sm px-2 p-3 py-0 text-dark bg-transparent border-0 qty-minus"
                                                         type="button">−</button>
