@@ -1065,9 +1065,11 @@ footer .section-title {
 
 .qty-box button {
   border: none;
-  border-radius: 6px !important;
+  border-radius: 12px !important;
 }
-
+#quantity{
+  border-radius: 12px !important;
+}
 .zoom-container {
   position: relative;
   overflow: hidden;
